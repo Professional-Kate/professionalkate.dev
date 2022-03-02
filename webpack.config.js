@@ -2,11 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.join(__dirname, "src", "index.js"),
+  entry: path.join(__dirname, "src", "App.jsx"),
   output: { path: path.join(__dirname, "dist"), filename: "main.js" },
   mode: "development",
   resolve: { modules: [path.resolve(__dirname, "src"), "node_modules"] },
-  devServer: { static: path.join(__dirname, "./") },
+  devServer: {
+    static: path.join(__dirname, "/"),
+    client: { logging: "error" },
+  },
   module: {
     rules: [
       {
@@ -15,7 +18,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(css)$/,
+        test: /\.(css|scss)$/,
         use: ["style-loader", "css-loader"],
       },
       {
