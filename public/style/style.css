@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
+
+:root {
+  /* COLOR */
+  --dark-grey: hsl(201, 20%, 24%);
+  --bright-orange: hsl(40, 97%, 64%);
+  --bright-blue: hsl(207, 88%, 62%);
+  background-color: var(--dark-grey);
+  color: var(--bright-orange);
+  /* CENTER ALIGN */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* FONTS */
+  --highlight-font: "Bebas Neue", Arial;
+  --normal-font: "Roboto", Arial;
+  font-family: var(--highlight-font);
+}
+
+.flex {
+  display: flex;
+}
+
+.main-header {
+  font-size: 4rem;
+  white-space: wrap;
+}
+
+.nav-button {
+  cursor: pointer;
+  border: 0;
+  background-color: inherit;
+  color: inherit;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 20px;
+}
